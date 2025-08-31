@@ -2,7 +2,7 @@
 using namespace std;
 
                                   
-void heapify(int arr[], int n, int i)// i is the node to be heapified
+void heapify(int arr[], int n, int i)
  {
     int largest = i;         
     int left = 2 * i + 1;   
@@ -32,10 +32,15 @@ void heapSort(int arr[], int n) {
   
     for (int i = n - 1; i > 0; i--) {
        
-        swap(arr[0], arr[i]);//swapping maxx with the last element,hence the maxx element is it its right position
+        swap(arr[0], arr[i]);
        
         heapify(arr, i, 0);
     }
+
+
+
+
+
 }
 
 
@@ -54,9 +59,10 @@ int main() {
     cout << "Enter elements: ";
     for (int i = 0; i < n; i++)
         cin >> arr[i];
-
+ 
     cout << "Original array: ";
     printArray(arr, n);
+   
 
     heapSort(arr, n);
 
